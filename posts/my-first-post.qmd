@@ -1,0 +1,11 @@
+---
+title: "Getting Started in the CAR Lab"
+description: "My first week in the Mobility Systems Lab."
+date: "2025-02-12"
+categories: [lab, onboarding]
+---
+
+This week, I started my research position in the Mobility Systems Lab (CAR Lab) at Ohio State University. It was an informative week as I got acquainted with the lab environment, met my new colleagues, and began to understand the projects we are working on. Currently, I am working on getting familiar with the tech stack and other tools we use for collabeoration. I am looking forward to contibuting to this research and learning more about the reseach process.
+
+I am particullarly excited to contribute to work on the pipelines for data processing and analysis for the development of AI models for  detection in real-time systems. I am also excited to learn more about knowledge distiliation and getting models to be effective on resource constrained systems.
+
