@@ -6,16 +6,16 @@ title: "CV"
 
 | Degree | Field | Institution | Year |
 |--------|-------|-------------|------|
-| B.S.   | Your Field | Your University | Expected 20XX |
+| B.S.   | Computer Science Engineering | Ohio State University | Expected 2028 |
 
 ## Experience
 
-### Research Assistant — [Lab Name]
-*[University], [Start Date] – Present*
+### Research Assistant — Center Automative Research
+*Ohio State University, 2/15/26 – Present*
 
-- Brief description of your work
+- I work in the CAR lab on designing efficent AI systems for securing intra-vehicle communciation.
 
 ## Skills
 
-- **Programming:** Python, MATLAB, etc.
-- **Tools:** Git, LaTeX, etc.
+- **Programming:** Python, MATLAB, Java, C/C++, Javascript.
+- **Tools:** Git, Quarto, Microsoft 365, VSCode.
