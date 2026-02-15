@@ -1,5 +1,5 @@
 ---
-title: "Your Name"
+title: "Drew Ralston Portfolio"
 image: images/profile.jpg
 about:
   template: trestles
@@ -8,29 +8,29 @@ about:
   links:
     - icon: github
       text: GitHub
-      href: https://github.com/YOURUSERNAME
+      href: https://github.com/dralston168
     - icon: envelope
       text: Email
-      href: mailto:your.email@university.edu
+      href: mailto:ralston.168@osu.edu
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/in/YOURUSERNAME
+      href: https://linkedin.com/in/drew-ralston
 ---
 
 ## About Me
 
 <!-- REPLACE this section with your own bio -->
 
-I am a [your year] student in [your department] at [your university].
-I work in the [Lab Name] on [brief description of research].
+I am a second year student in Computer Science Engineering at Ohio State University.
+I work in the CAR lab on designing efficent AI systems for securing intra-vehicle communciation.
 
 ## Research Interests
 
-- Interest 1
-- Interest 2
-- Interest 3
+- Network Security in Cyber-Physical Systems
+- Performance-Aware Security in Real-Time Systems
+- AI-Driven Threat Detection in Real-Time Systems
 
 ## Education
 
-- **[Degree]** in [Field], [University], [Year (expected)]
-- **[Degree]** in [Field], [University], [Year]
+- **Bachelors** in Computer Science Engineering , Ohio State University, 2028
+
