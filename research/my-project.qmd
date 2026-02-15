@@ -1,0 +1,6 @@
+---
+title: "Anomaly Dectection in vehicle networks using AI"
+description: "This project focuses on developing an ensemble AI models for detecting anomalies in intra-vehicle communication networks, which is crucial for ensuring the security and reliability of modern vehicles. The project involves designing and implementing a pipeline for data processing and analysis, as well as developing and evaluating AI models for anomaly detection. The goal is to create a system that can effectively identify security anomalies in real-time, while also being efficient enough to run on resource-constrained systems commonly found in vehicles."
+date: "2026-02-15"
+categories: [CAR-MSL project]
+---
