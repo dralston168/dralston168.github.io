@@ -1,6 +1,6 @@
 ---
-title: "Getting Started in the CAR Lab"
-description: "My first week in the Mobility Systems Lab."
+title: "SQLite Introduction and Explanation"
+description: "Explaining the use and benefits of using SQLite for tracking experiments in an ML project."
 date: "2025-02-12"
 categories: [lab, sql, onboarding]
 ---
