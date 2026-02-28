@@ -1,0 +1,19 @@
+---
+title: "Getting Started in the CAR Lab"
+description: "My first week in the Mobility Systems Lab."
+date: "2025-02-12"
+categories: [lab, sql, onboarding]
+---
+
+Why is a database better than a collection of CSV files for tracking experiments?
+
+A database is better than a collection of CSV files for tracking experiments because it allows for more efficient data management, querying, and analysis. Databases can handle larger volumes of data, support complex relationships between different data entities, and provide features like indexing and transactions that improve performance and data integrity. Additionally, databases can be accessed concurrently by multiple users, making collaboration easier.
+
+What would a JOIN be useful for in an ML project? (Hint: think about linking runs to datasets.)
+
+A JOIN would be useful in an ML project for linking runs to datasets because it allows you to combine data from different tables based on a common key. For example, you might have one table that contains information about the datasets used in your experiments and another table that contains information about the runs of your ML models. By using a JOIN, you can easily retrieve all the runs associated with a specific dataset or vice versa, enabling you to analyze the performance of your models in relation to the datasets they were trained on.
+
+When might you choose SQLite over a full database server like PostgreSQL?
+
+you might choose SQLite over a full database server like PostgreSQL when 
+you are working with smaller datasets, need a lightweight database solution, or when you want to avoid the overhead of setting up and managing a full database server. SQLite is ideal for applications that require a simple, file-based database without the need for concurrent access by multiple users.
