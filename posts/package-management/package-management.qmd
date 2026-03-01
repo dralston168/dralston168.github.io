@@ -1,7 +1,7 @@
 ---
 title: "Package Management Concept and Tools"
 description: "Learning about package management concepts and tools for managing dependencies in software projects."
-date: "2025-02-12"
+date: "2026-03-01"
 categories: [lab, onboarding, package-management, tools, python]
 ---
 
