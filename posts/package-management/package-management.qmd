@@ -11,5 +11,5 @@ virtual enviroments exist to create isolated environments for different projects
 
 Here is an example of how virtual enviroments can be effective for managing dependencies in a Python project:
 
-!(pm-1.png)
-!(pm-2.png)
+![](pm-1.png)
+![](pm-2.png)
