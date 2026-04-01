@@ -1,0 +1,55 @@
+---
+title: "IoT Network Traffic Analysis with Machine Learning - Current Progress"
+description: "An overview of my progress in my IoT-ML project: building a data pipeline from raw Zeek network logs to an engineered feature matrix for malicious traffic detection."
+date: "2026-03-31"
+categories: [machine learning, data-processing, data-pipeline, feature-engineering]
+---
+
+## Goal
+
+Detect malicious network traffic from IoT devices using machine learning, based on Zeek network intrusion detection logs from 38 devices captured in November 2020
+
+---
+
+## Experimental Workflow
+
+### 1. Data Ingestion
+
+Raw Zeek JSON logs are extracted from 38 zip files and loaded into a SQLite database (~43M records across 14 tables), with traffic bucketed into time windows.
+
+### 2. Feature Exploration
+
+To determine which signals are worth encoding into the graph, log records are first aggregated into **34 candidate daily features** per device (connection counts, protocol ratios, DNS anomalies, file transfer stats). Redundant features are dropped by removing highly correlated pairs (|r| > 0.75) and high-multicollinearity features (VIF > 10), leaving **25 features** with distinct information. Derived security metrics — `traffic_asymmetry`, `src_concentration`, `weird_rate`, `dns_to_conn_ratio` — are identified here and carried forward as core signals in the graph. This step establishes *what to measure*; Step 3 builds those measurements directly into the graph at higher resolution.
+
+### 3. Graph Construction
+
+Going back to the raw logs, graphs are built at **hourly** granularity — each snapshot has devices as nodes and observed connections as edges, with two distinct types of features:
+
+- **Edges** capture which devices connect to which, along with communication attributes — volume (`conn_count`, `orig_bytes`), reliability (`failed_ratio`), protocol mix (`tcp_ratio`), and application-layer behavior (`http_post_ratio`, `executable_files`, `tunnel_count`).
+- **Node features describe how a device behaves overall** — aggregated across all its connections from both sender and receiver perspectives, enriched with DNS activity (query volume, NXDOMAIN ratio), and extended with temporal delta and rolling z-score features to flag sudden deviations from each device's recent 24-hour baseline.
+- Input into a VGAE model
+
+---
+
+## Final Feature Set
+
+| Category | Features |
+|---|---|
+| Connection | `conn_count`, `unique_src_ips`, `unique_dst_ips`, `unique_dst_ports`, `failed_conn_ratio` |
+| Protocol | `tcp_ratio`, `udp_count`, `dns_count`, `dns_to_conn_ratio` |
+| DNS / HTTP | `unique_domains`, `http_count`, `unique_hosts` |
+| Files / SNMP / Network | `total_file_bytes`, `unique_mime_types`, `snmp_count`, `snmp_get_requests`, `snmp_set_requests`, `tunnel_count`, `dpd_count` |
+| Derived Security | `traffic_asymmetry`, `total_bytes`, `src_concentration`, `weird_rate` |
+
+---
+
+## Current Status
+
+| Phase | Status |
+|---|---|
+| Data ingestion pipeline | Done |
+| Feature engineering | Done |
+| EDA | Done |
+| Graph prep | In-Progress |
+| Model architecture / training | Not started |
+| Evaluation / results | Not started |
