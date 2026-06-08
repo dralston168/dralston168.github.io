@@ -1,0 +1,45 @@
+---
+title: "WaDi Research Checkpoint Post"
+description: "An overview of my progress in my WaDi dataset investigation
+date: "2026-06-08"
+categories: [machine learning, data-analysis]
+---
+
+## Progress Summary
+
+In my investigation, I've chosen to focus on temporal metrics that are hidden in the data and give good insight into possible edge features/classifications.
+I have particularly focused on CCF and granger causality as metrics for edge features and edge classification.
+
+---
+
+## Current Methodology
+
+CCF was the starting point to look into how timed relationships exist in this network. I looked at a CCF baseline and then compared it to CCF from attack data
+to determine if their is a meaningful interuption in the relationships across the newtwork when an attack is present. However, I also wanted to look into more temporal
+metrics that would be stricter in their significance. I looked into using granger causality as a metric, specifically for determing an edge existence. Granger causality is a
+test that in this context detrmines if a sensor is useful in forecasting the value of another sensor. It acts as another edge feature that can help reduce the size of the graph tremendously.
+I want to look into more temporal metrics that add on more information to an edge and put these through a filter to start with a much smaller graph, particularly in edge size. I can always scale back the filter for training if there is
+to much information being lost. 
+
+---
+
+## Current Results
+
+My CCF results showcased what I thought they would with every single relationship having a significant change when an attack is present on the network.
+This is meaningful because CCF can clearly be used as a metric to classify whether an edge has an attack present or not. However, even with all relationships
+being significant, there is still a lot of noise in a graph that is only encoded with CCF. That would mean every sensor is connected to every other sensor and 
+just looking at CCF you cant determine that there isnt just a few sensors that are driving the correlation relationship across the whole network. This is why it's
+important that I look into more temporal metrics that all have slighlty different meaning and then put them together to have a graph where the edges have a diverse range
+of meaning and they aren't just existing due to one metric. Some of my vizualizations in my notebooks showcase these results more specifically.
+
+---
+
+## Next Steps: temporal metric filtering and graph conceptualization
+
+I currently am aiming to repeat my methodology for a few other temporal metrics that I believe look into a different part sensor realtionships. This will give me a large batch to work with
+(a hypersentitive filter) that I can always work backwards on if I need to. After doing this I can begin a basic graph conceptualizaton. Edges will be made up of these metrics if they pass through
+the filter (otherwise no edges exist). This should give me a readable graph to begin with. For my graph conceptualization, I intend on having other unique features to hold up the physical meaning of the
+system as well. Some features I want to begin with are inter vs intra edge classification, node group classification (clusters of subsytems), and some distance/timing encoding which I currently plan to use the
+lag metric that I obtained through CCF (but I want to look into other possibilites). I also want to look into different represneations and renderings I can do with the networkX library.
+
+---
