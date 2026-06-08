@@ -40,6 +40,7 @@ I currently am aiming to repeat my methodology for a few other temporal metrics 
 (a hypersentitive filter) that I can always work backwards on if I need to. After doing this I can begin a basic graph conceptualizaton. Edges will be made up of these metrics if they pass through
 the filter (otherwise no edges exist). This should give me a readable graph to begin with. For my graph conceptualization, I intend on having other unique features to hold up the physical meaning of the
 system as well. Some features I want to begin with are inter vs intra edge classification, node group classification (clusters of subsytems), and some distance/timing encoding which I currently plan to use the
-lag metric that I obtained through CCF (but I want to look into other possibilites). I also want to look into different represneations and renderings I can do with the networkX library.
+lag metric that I obtained through CCF (but I want to look into other possibilites). I also want to look into different represneations and renderings I can do with the networkX library. Ultimately, everything is 
+controlled by the filter and having this makes it easy to tinker and look into different results. This is a cyclical process that can be repeated throughout the training process until we get the best results.
 
 ---
