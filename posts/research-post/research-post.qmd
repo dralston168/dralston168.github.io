@@ -1,8 +1,10 @@
 ---
 title: "WaDi Research Checkpoint Post"
-description: "An overview of my progress in my WaDi dataset investigation
+description: "An overview of my progress in my WaDi dataset investigation"
 date: "2026-06-08"
-categories: [machine-learning, data-analysis]
+categories:
+  - machine-learning
+  - data-analysis
 ---
 
 ## Progress Summary
